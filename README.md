@@ -30,5 +30,6 @@ Tools
     GitHub
 
 ## Project Repository
-TODO: Create a repository for your project. You can add this proposal to it!
+
+https://github.com/tagrgr/Smart-Automated-Plant-Care-System
 
