@@ -16,10 +16,12 @@ Hardware
     1-channel Relay Module
     Mini Water Pump + Tubing
     Sense HAT
+
 Software / Programming
     Python (Probably)
     Raspberry Pi OS
     GPIO (hardware control)
+    
 Networking
     MQTT or HTTP protocol
     JSON data format
