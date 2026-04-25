@@ -18,28 +18,33 @@ The Raspberry Pi operates as a continuously running server, ensuring that the cl
 ## Tools, Technologies and Equipment
 
 **Hardware**
-    - Raspberry Pi 4 (used as the main server)
-    - Raspberry Pi Camera Module (used for QR code authentication)
-    - Sense HAT (used for environmental sensing and LED status display)
-    - External Hard Drive – 500GB (used for file storage in the cloud system)
+
+- Raspberry Pi 4 (used as the main server)
+- Raspberry Pi Camera Module (used for QR code authentication)
+- Sense HAT (used for environmental sensing and LED status display)
+- External Hard Drive – 500GB (used for file storage in the cloud system)
 
 **Software / Programming**
-    - Python (Hopefully)
-    - Raspberry Pi OS
-    - Nextcloud (for cloud storage and file management)
+
+- Python (Hopefully)
+- Raspberry Pi OS
+- Nextcloud (for cloud storage and file management)
     
 **Networking**
-    - Local WiFi Network (for local access to the cloud system)
-    - Internet Connection (for secure remote access)
-    - HTTP/HTTPS Protocol (for web-based access)
+
+- Local WiFi Network (for local access to the cloud system)
+- Internet Connection (for secure remote access)
+- HTTP/HTTPS Protocol (for web-based access)
+
 **Tools**
-    - Visual Studio Code
-    - GitHub
-    - OpenCV (for camera processing)
-    - Pyzbar (for QR code scanning)
-    - Sense HAT Python Library
+
+- Visual Studio Code
+- GitHub
+- OpenCV (for camera processing)
+- Pyzbar (for QR code scanning)
+- Sense HAT Python Library
 
 ## Project Repository
 
-https://github.com/tagrgr/Smart-Automated-Plant-Care-System
+https://github.com/tagrgr/Smart-Home-Cloud-Pi
 
