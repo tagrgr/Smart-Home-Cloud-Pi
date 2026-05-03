@@ -20,8 +20,11 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 # Define route for homepage
 @app.route("/")
 def home():
-    # Get list of files from storage
-    files = os.listdir(UPLOAD_FOLDER)
+    # Get list of files from storage and hide System Volume Information directory  and hidden system files as they're useless for our project 
+    files = [
+        f for f in os.listdir(UPLOAD_FOLDER)
+        if f != "System Volume Information" and not f.startswith(".")
+    ]
 
     # Build HTML page with a list of files
     file_list_html = ""
