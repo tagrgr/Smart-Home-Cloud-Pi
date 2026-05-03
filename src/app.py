@@ -6,7 +6,7 @@
 
 
 import os
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, send_from_directory, redirect
 
 # Create flask application instance
 app = Flask(__name__)
@@ -26,7 +26,14 @@ def home():
     # Build HTML page with a list of files
     file_list_html = ""
     for file in files:
-        file_list_html += f'<li><a href="/download/{file}">{file}</a></li>'
+        file_list_html += f'''
+        <li>
+            <a href="/download/{file}">{file}</a>
+            <form action="/delete/{file}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        '''
 
     return f"""
     <h1>Smart Home Cloud Pi</h1>
@@ -63,9 +70,23 @@ def upload_file():
 
     return f"File '{file.filename}' uploaded successfully <br><a href='/'>Back</a>"
 
+# download route
 @app.route("/download/<filename>")
 def download_file(filename):
     return send_from_directory(UPLOAD_FOLDER, filename, as_attachment=True)
+
+# delete route
+@app.route("/delete/<filename>", methods=["POST"])
+def delete_file(filename):
+    # Create the full path to the selected file
+    file_path = os.path.join(UPLOAD_FOLDER, filename)
+
+    # Check if the file exists before trying to delete it
+    if os.path.exists(file_path):
+        os.remove(file_path)
+
+    # Send the user back to the home page after deleting
+    return redirect("/")
 
 # Run the Flask app
 if __name__ == "__main__":
