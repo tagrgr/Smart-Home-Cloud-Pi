@@ -28,7 +28,7 @@ def home():
     for file in files:
         file_list_html += f'<li><a href="/download/{file}">{file}</a></li>'
 
-    return """
+    return f"""
     <h1>Smart Home Cloud Pi</h1>
     <h2>Upload File</h2>
 
